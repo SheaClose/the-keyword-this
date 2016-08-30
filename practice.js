@@ -1,19 +1,23 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      //Answer
+      //allows you refer to the object from within. Especially useful when large numbers of objects are going to be created, and the name is not known till created. prevents the need to manual input the actual objects name in each specific object.
+
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-
+      // Explicit: In call(), apply(), and bind() you are providing the name of the obj within the parens explicitly providing it with the name of the obj to which it will refer, if an obj is not specified it will default to the window.
+      // Implicit: In this case the object is not specified as part of the call, but it is located on the left side of the dot, providing implied context.
+      //default: If explicit and implicit are not applied, it will default to the window (not good unless SPECIFICALLY called for, and I don't know in which situation would be, so I will avoid.)
+      //New: This is a function that is used for object creation. When naming functions, capitol letters are used as the variable name to indicate this funciton is ONLY for object creation.
   // 3) What is the difference between call and apply?
 
-      //Answer
+      //call() triggers the function immediately, but requires the obj and arguements to be input manually. Apply(), similarly, triggers immediately, but the arguements are entered in the form of an array. These CAN be input manually in the form of an array, OR they can be given a variable name for an array.
 
   // 4) What does .bind do?
 
-      //Answer
+      //Answer bind saves the function call for another time, but depending on how and when it is called, the refferant object may have changed. bind allows you to attach the specific obj of your choosing to the function call, ensuring .this always refers to the correct obj. 
 
 
 //Next Problem
