@@ -17,24 +17,39 @@
 
   // 4) What does .bind do?
 
-      //Answer bind saves the function call for another time, but depending on how and when it is called, the refferant object may have changed. bind allows you to attach the specific obj of your choosing to the function call, ensuring .this always refers to the correct obj. 
+      //Answer bind saves the function call for another time, but depending on how and when it is called, the refferant object may have changed. bind allows you to attach the specific obj of your choosing to the function call, ensuring .this always refers to the correct obj.
 
 
 //Next Problem
+
 
 //Create an object called user which has the following properties.
   //username --> which is a string
   //email --> which is a string
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
-    //Code Here
-
+  var user = {
+    username: "Shea"
+    , email: "Shea_Close"
+    , getUsername: function() {
+      return this.username;
+    }
+  };
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
+user.getUsername();
 
 
 //Next Problem
 
-
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = function() {
+    return this.move += 10;
+  }
+}
 // Write the function definitions which will make the following function invocations function properly.
 
   //Function Invocations Here
